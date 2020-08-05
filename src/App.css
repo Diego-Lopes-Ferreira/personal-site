@@ -6,7 +6,6 @@
 .App {
   text-align: center;
 }
-
 /*
   * Header
   [ ] Ter altura definida
@@ -21,32 +20,28 @@
   background-color: #ff0000;
   color: var(--txt-primary);
 }
-.app-header {
-}
 
-.app-link {
-  color: #61dafb;
-}
 /*
   * Header
   [v] Ocupar 100% da tela
   [v] Fonte branca
   [v] texto cinza claro
-  [ ] botao
+  [v] botao
   [ ] funcao dos icones
+  [ ] Funcao do botao
   [ ] 
 */
 
 .app-home-wrapper {
   height: 100vh;
-  background-image: url("./Images/business.jpg");
+  background-image: url("./editable-content/Images/business.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .app-home {
-  background-color: #00000077;
+  background-color: #00000088;
   display: flex;
   height: 100%;
   flex-direction: column;

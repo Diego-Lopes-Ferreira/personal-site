@@ -34,4 +34,3 @@ const personInfo = {
   name: 'Flávio Smania Ferreira',
   desc: 'Gerente Administrativo da Projex Engenharia, Contador, Controller e Professor Universitário',
 }
-
