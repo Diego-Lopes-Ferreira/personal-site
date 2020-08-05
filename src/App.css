@@ -1,3 +1,8 @@
+:root {
+  --txt-primary: #dddddd;
+  --txt-secondary: #aaaaaa;
+  --bg-primary: #121212;
+}
 .App {
   text-align: center;
 }
@@ -12,20 +17,69 @@
 */
 .app-header-wrapper {
   width: 100%;
-  
+  height: 75px;
+  background-color: #ff0000;
+  color: var(--txt-primary);
 }
 .app-header {
-  /* 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  */
 }
 
 .app-link {
   color: #61dafb;
+}
+/*
+  * Header
+  [v] Ocupar 100% da tela
+  [v] Fonte branca
+  [v] texto cinza claro
+  [ ] botao
+  [ ] funcao dos icones
+  [ ] 
+*/
+
+.app-home-wrapper {
+  height: 100vh;
+  background-image: url("./Images/business.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app-home {
+  background-color: #00000077;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--txt-primary);
+}
+.app-home h1 {
+  font-weight: 300;
+  margin: 0 0 30px 0;
+  font-size: 6rem;
+}
+.app-home h3 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--txt-secondary);
+}
+.app-home button {
+  color: var(--txt-primary);
+  background-color: transparent;
+  border: 0.1rem solid var(--txt-primary);
+  height: 5rem;
+  width: 15rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+}
+.app-home button:hover {
+  color: var(--txt-secondary);
+  border: 0.1rem solid var(--txt-secondary);
+}
+.app-home-social-media {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
 }
