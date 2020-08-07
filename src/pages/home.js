@@ -8,11 +8,10 @@ function getWindowDimensions() {
     height
   };
 }
-export default function Home() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-  
+export default function Home({ refere, scrollTo }) {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());  
   return (
-    <header className="app-home-wrapper" >
+    <header ref={refere} className="app-home-wrapper" >
       <div className="app-home">
         <h1>{personInfo.name}</h1>
         <h3>{personInfo.desc}</h3>
@@ -24,7 +23,7 @@ export default function Home() {
             <p>ICON</p>
           </div>
         </div>
-        <button>Sobre mim</button>
+        <button onClick={scrollTo}>Sobre mim</button>
       </div>
     </header>
   );
