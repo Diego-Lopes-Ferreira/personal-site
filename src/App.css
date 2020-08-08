@@ -2,7 +2,9 @@
   --txt-primary: #dddddd;
   --txt-secondary: #aaaaaa;
   --txt-dark-1: #212121;
+  --txt-dark-1-50: #21212177;
   --txt-dark-2: #414141;
+  --txt-dark-2-50: #41414177;
   --bg-primary: #121212;
 }
 .App {
@@ -82,12 +84,12 @@
 
 /*
   * About page
-  [ ] Ocupy 100% height of the screen
-  [ ] Picture on the side
-  [ ] Title and text on the other
-    [ ] Title
-    [ ] Text
-  [ ] Have the picture from instagram
+  [v] Ocupy 100% height of the screen
+  [v] Picture on the side
+  [v] Title and text on the other
+    [v] Title
+    [v] Text
+  [v] Have the picture from LinkedIn
 */
 
 .app-about-wrapper {
@@ -154,4 +156,80 @@
   text-decoration: underline;
 }
 /*
+* Skills
+[v] Ocuppy 100% of the screen
+[v] have two buttons
+[v] Border changes on click
+[ ] Skill - contains 3 things
+  [ ] Title
+  [ ] Progress total
+  [ ] Progress - width on JS
+*/
+.app-skills-wrapper {
+  padding-top: 80px;
+  height: 100vh;
+}
+.app-skills nav {
+  margin-bottom: 2rem;
+}
+.app-skills button {
+  color: var(--txt-dark-1);
+  background-color: transparent;
+  padding: 0.5rem;
+  width: 40vw;
+  height: 3rem;
+  border: 1px solid transparent;
+  border-radius: 10px 10px 0 0;
+}
+.app-skills button:hover {
+  color: var(--txt-dark-2);
+  border: 1px solid var(--txt-dark-2-50);
+}
+.app-skill-progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.app-skill-progress-wrapper {
+  width: 40vw;
+  height: 5rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0.5rem;
+  /* background-color: #ff0000; */
+  text-align: left;
+}
+.app-skill-progress p {
+  font-weight: 300;
+}
+.app-skill-bar {
+  height: 30px;
+  border-radius: 10px;
+  background-color: var(--txt-secondary);
+}
+@keyframes expandWidth {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.app-skill-bar-progress {
+  transform-origin: left;
+  border-radius: 10px;
+  height: 30px;
+  animation: expandWidth 0.7s linear;
+}
+/*
+.app-skills
+.app-skills
+.app-skills
+.app-skills
+.app-skills
+.app-skills
+.app-skills
+.app-skills
 */
