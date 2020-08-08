@@ -1,6 +1,8 @@
 :root {
   --txt-primary: #dddddd;
   --txt-secondary: #aaaaaa;
+  --txt-dark-1: #212121;
+  --txt-dark-2: #414141;
   --bg-primary: #121212;
 }
 .App {
@@ -22,14 +24,13 @@
 }
 
 /*
-  * Header
+  * Home page
   [v] Ocupar 100% da tela
   [v] Fonte branca
   [v] texto cinza claro
   [v] botao
-  [ ] funcao dos icones
-  [ ] Funcao do botao
-  [ ] 
+  [v] funcao dos icones
+  [v] Funcao do botao 
 */
 
 .app-home-wrapper {
@@ -78,3 +79,79 @@
   padding: 10px;
   gap: 10px;
 }
+
+/*
+  * About page
+  [ ] Ocupy 100% height of the screen
+  [ ] Picture on the side
+  [ ] Title and text on the other
+    [ ] Title
+    [ ] Text
+  [ ] Have the picture from instagram
+*/
+
+.app-about-wrapper {
+  height: 100vh;
+  background-color: #acacac;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.app-about {
+  display: flex;
+  flex-direction: row;
+}
+
+.app-about-img-wrapper {
+  margin: auto 50px auto 50px;
+}
+.app-about-img {
+  height: 320px;
+  width: 320px;
+}
+.app-about-img img {
+  border-radius: 50%;
+  height: 320px;
+  width: auto;
+}
+.app-about-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 2rem 3rem 2rem 3rem;
+}
+.app-about-texts h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: var(--txt-dark-1);
+}
+.app-about-texts p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 30px;
+  word-spacing: 2px;
+  color: var(--txt-dark-1);
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+.app-about-texts a {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--txt-dark-1);
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid var(--txt-dark-1);
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 2rem;
+}
+.app-about a:hover {
+  color: var(--txt-dark-2);
+  border: 1px solid var(--txt-dark-2);
+  text-decoration: underline;
+}
+/*
+*/

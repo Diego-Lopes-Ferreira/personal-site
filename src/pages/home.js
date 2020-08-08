@@ -8,20 +8,26 @@ function getWindowDimensions() {
     height
   };
 }
+
+function SocialIcon({ name }) {
+  return (
+    <div className="button">
+      <p>ICON</p>
+    </div>
+  );
+}
+
 export default function Home({ refere, scrollTo }) {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());  
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   return (
     <header ref={refere} className="app-home-wrapper" >
       <div className="app-home">
         <h1>{personInfo.name}</h1>
         <h3>{personInfo.desc}</h3>
         <div className="app-home-social-media">
-          <div className="button">
-            <p>ICON</p>
-          </div>
-          <div className="button">
-            <p>ICON</p>
-          </div>
+          <SocialIcon />
+          <SocialIcon />
+          <SocialIcon />
         </div>
         <button onClick={scrollTo}>Sobre mim</button>
       </div>

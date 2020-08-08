@@ -3,6 +3,7 @@ import './App.css';
 
 import Header from './pages/header';
 import Home from './pages/home';
+import About from './pages/about';
 
 //const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 function scrollToRef(ref) {
@@ -10,16 +11,13 @@ function scrollToRef(ref) {
 }
 
 export default function App() {
-
-  
-  const myref = useRef(null);
-
-
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
   return (
     <div className="App">
       {/* <Header /> */}
-      <Home scrollTo={() => scrollToRef(myref)} />
-      <Home refere={myref} />
+      <Home refere={homeRef} scrollTo={() => scrollToRef(aboutRef)} />
+      <About refere={aboutRef} />
     </div>
   );
 }
