@@ -17,7 +17,12 @@ export default function App() {
   const skillsRef = useRef(null);
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header functions={{
+        goToHome: () => scrollToRef(homeRef),
+        goToAbout: () => scrollToRef(aboutRef),
+        goToSkills: () => scrollToRef(skillsRef),
+        goToBlog:  () => console.log('FUI PRO BLOG'),
+      }} />
       <Home refere={homeRef} scrollTo={() => scrollToRef(aboutRef)} />
       <About refere={aboutRef} />
       <Skills refere={skillsRef} />
