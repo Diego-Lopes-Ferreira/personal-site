@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 
 export default function About({ refere }) {
 
@@ -8,23 +7,23 @@ export default function About({ refere }) {
   ))
 
   return (
-    <div ref={refere} className="app-about-wrapper">
-      <div className="app-about">
+    <div ref={refere} className="home-about-wrapper">
+      <div className="home-about">
 
-        <div className="app-about-img-wrapper">
-          <div className="app-about-img">
+        <div className="home-about-img-wrapper">
+          <div className="home-about-img">
             <img src={about.profileImgLink} alt="" />
           </div>
         </div>
 
-        <div className="app-about-texts">
-          <div className="app-about-title">
+        <div className="home-about-texts">
+          <div className="home-about-title">
             <h1>{about.title}</h1>
           </div>
-          <div className="app-about-desc">
+          <div className="home-about-desc">
             <p>{about.desc}</p>
           </div>
-          <div className="app-about-buttons">
+          <div className="home-about-buttons">
             {buttons}
           </div>
         </div>

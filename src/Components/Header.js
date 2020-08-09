@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css';
 
 export default function Header({ functions }) {
   const [bgColor, setBgColor] = useState('#00000000');
   const [txtColor, settxtColor] = useState('#00000000');
-
   const [scrollPosition, setSrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setSrollPosition(position);
 
+  const handleScroll = () => {
+    setSrollPosition(window.pageYOffset);
   };
 
   useEffect(() => {
@@ -18,6 +15,7 @@ export default function Header({ functions }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   useEffect(() => {
     if (scrollPosition > 400) {
       setBgColor('#dddddd');

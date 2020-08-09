@@ -1,0 +1,206 @@
+/*
+  * table of contents
+  - Home
+  - About
+  - Skills
+*/
+.Home {
+  text-align: center;
+}
+
+/*
+  * Home page
+  [v] Ocupar 100% da tela
+  [v] Fonte branca
+  [v] texto cinza claro
+  [v] botao
+  [v] funcao dos icones
+  [v] Funcao do botao 
+*/
+.home-main-wrapper {
+  height: 100vh;
+  background-image: url("../../editable-content/Images/business.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-main {
+  background-color: #00000088;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--txt-primary);
+}
+.home-main h1 {
+  font-weight: 300;
+  margin: 0 0 30px 0;
+  font-size: 6rem;
+}
+.home-main h3 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--txt-secondary);
+}
+.home-main button {
+  color: var(--txt-primary);
+  background-color: transparent;
+  border: 0.1rem solid var(--txt-primary);
+  height: 5rem;
+  width: 15rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+}
+.home-main button:hover {
+  color: var(--txt-secondary);
+  border: 0.1rem solid var(--txt-secondary);
+}
+.home-main-social-media {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
+}
+
+/*
+  * About page
+  [v] Ocupy 100% height of the screen
+  [v] Picture on the side
+  [v] Title and text on the other
+    [v] Title
+    [v] Text
+  [v] Have the picture from LinkedIn
+*/
+.home-about-wrapper {
+  height: 100vh;
+  background-color: #acacac;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.home-about {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-about-img-wrapper {
+  margin: auto 50px auto 50px;
+}
+.home-about-img {
+  height: 320px;
+  width: 320px;
+}
+.home-about-img img {
+  border-radius: 50%;
+  height: 320px;
+  width: auto;
+}
+.home-about-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 2rem 3rem 2rem 3rem;
+}
+.home-about-texts h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: var(--txt-dark-1);
+}
+.home-about-texts p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 30px;
+  word-spacing: 2px;
+  color: var(--txt-dark-1);
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+.home-about-texts a {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--txt-dark-1);
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid var(--txt-dark-1);
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 2rem;
+}
+.home-about a:hover {
+  color: var(--txt-dark-2);
+  border: 1px solid var(--txt-dark-2);
+  text-decoration: underline;
+}
+
+/*
+* Skills
+[v] Ocuppy 100% of the screen
+[v] have two buttons
+[v] Border changes on click
+[v] Skill - contains 3 things
+  [v] Title
+  [v] Progress total
+  [v] Progress - width on JS
+*/
+.home-skills-wrapper {
+  padding-top: 80px;
+  height: 100vh;
+}
+.home-skills nav {
+  margin-bottom: 2rem;
+}
+.home-skills button {
+  color: var(--txt-dark-1);
+  background-color: transparent;
+  padding: 0.5rem;
+  width: 40vw;
+  height: 3rem;
+  border: 1px solid transparent;
+  border-radius: 10px 10px 0 0;
+}
+.home-skills button:hover {
+  color: var(--txt-dark-2);
+  border: 1px solid var(--txt-dark-2-50);
+}
+.home-skill-progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.home-skill-progress-wrapper {
+  width: 40vw;
+  height: 5rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0.5rem;
+  /* background-color: #ff0000; */
+  text-align: left;
+}
+.home-skill-progress p {
+  font-weight: 300;
+}
+.home-skill-bar {
+  height: 30px;
+  border-radius: 10px;
+  background-color: var(--txt-secondary);
+}
+@keyframes expandWidth {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.home-skill-bar-progress {
+  transform-origin: left;
+  border-radius: 10px;
+  height: 30px;
+  animation: expandWidth 0.7s linear;
+}

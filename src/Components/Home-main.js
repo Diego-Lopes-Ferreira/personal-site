@@ -1,13 +1,5 @@
-import React, { useState } from 'react';
-import '../App.css';
+import React from 'react';
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
 
 function SocialIcon({ name }) {
   return (
@@ -17,14 +9,13 @@ function SocialIcon({ name }) {
   );
 }
 
-export default function Home({ refere, scrollTo }) {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+export default function Main({ refere, scrollTo }) {
   return (
-    <header ref={refere} className="app-home-wrapper" >
-      <div className="app-home">
+    <header ref={refere} className="home-main-wrapper" >
+      <div className="home-main">
         <h1>{personInfo.name}</h1>
         <h3>{personInfo.desc}</h3>
-        <div className="app-home-social-media">
+        <div className="home-main-social-media">
           <SocialIcon />
           <SocialIcon />
           <SocialIcon />
