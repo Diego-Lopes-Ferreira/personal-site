@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
+import { Editor, EditorState } from 'draft-js';
+import 'draft-js/dist/Draft.css';
 import ReactMarkdown from 'react-markdown';
 
 import './index.css';
-import EditorContext from './markdown-context'
 
 /*
   * Editor Page
@@ -14,22 +15,18 @@ import EditorContext from './markdown-context'
 */
 
 export default function EditorPage() {
-  const [markdownText, setMarkdownText] = useState("");
 
-  const onInputChange = e => {
-    const newValue = e.currentTarget.value;
-    setMarkdownText(newValue);
-  };
-
-  const contextValue = {
-    markdownText,
-    setMarkdownText
-  };
   return (
     <div className="editor-wrapper">
       <div className="editor">
-
+        <MyEditor />
       </div>
     </div>
   );
+}
+
+function MyEditor() {
+  const [editorState, setEditorState] = React.useState(() => EditorState.createEmpty());
+
+  return <Editor editorState={editorState} onChange={setEditorState} />
 }
