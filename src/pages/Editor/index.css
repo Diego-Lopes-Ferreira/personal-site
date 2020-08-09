@@ -1,0 +1,48 @@
+/*
+  * Table of contents
+  - Editor Page
+  - Text Area
+  - Preview Area
+*/
+
+.editor-wrapper {
+  height: 100vh;
+}
+.editor {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.editor-edit {
+  padding: 2rem;
+  width: 50%;
+  height: 100%;
+  background-color: #ff0000;
+}
+.editor-edit textarea {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: var(--txt-primary);
+}
+.editor-right {
+  width: 50%;
+  padding: 2rem;
+  text-align: justify;
+}
+
+.editor-preview h1,
+.editor-preview h2,
+.editor-preview h3 {
+  text-align: center;
+}
+.editor-preview h4,
+.editor-preview h5,
+.editor-preview h6 {
+  text-align: left;
+  margin-left: 1rem;
+}
+.editor-preview h1 {
+  font-size: 3rem;
+}
