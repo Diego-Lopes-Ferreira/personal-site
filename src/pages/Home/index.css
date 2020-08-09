@@ -62,6 +62,20 @@
   padding: 10px;
   gap: 10px;
 }
+.home-main-button {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-main-button svg {
+  width: 3rem;
+  height: 3rem;
+}
+.home-main-button a {
+  color: var(--txt-primary);
+}
 
 /*
   * About page
