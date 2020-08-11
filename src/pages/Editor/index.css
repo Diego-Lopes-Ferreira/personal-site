@@ -6,36 +6,19 @@
 */
 
 .editor-wrapper {
-  /* height: 100vh; */
-}
-.editor {
-  height: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #ff0000;
+  width: 100%;
+  background-color: var(--txt-primary);
 }
-
-.codex-editor {
-  width: 80vw;
-  background-color: #aaaaaa;
-}
-.ce-toolbar {
-  background-color: #ff0000;
-}
-
-.editor-preview h1,
-.editor-preview h2,
-.editor-preview h3 {
-  text-align: center;
-}
-.editor-preview h4,
-.editor-preview h5,
-.editor-preview h6 {
-  text-align: left;
-  margin-left: 1rem;
-}
-.editor-preview h1 {
-  font-size: 3rem;
+.editor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  transition: none;
 }
