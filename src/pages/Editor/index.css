@@ -6,30 +6,23 @@
 */
 
 .editor-wrapper {
-  height: 100vh;
+  /* height: 100vh; */
 }
 .editor {
   height: 100%;
   display: flex;
   flex-direction: row;
-}
-
-.editor-edit {
-  padding: 2rem;
-  width: 50%;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
   background-color: #ff0000;
 }
-.editor-edit textarea {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  color: var(--txt-primary);
+
+.codex-editor {
+  width: 80vw;
+  background-color: #aaaaaa;
 }
-.editor-right {
-  width: 50%;
-  padding: 2rem;
-  text-align: justify;
+.ce-toolbar {
+  background-color: #ff0000;
 }
 
 .editor-preview h1,

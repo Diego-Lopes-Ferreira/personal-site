@@ -1,9 +1,23 @@
-import React, { useContext, useState } from 'react';
-import { Editor, EditorState } from 'draft-js';
-import 'draft-js/dist/Draft.css';
-import ReactMarkdown from 'react-markdown';
-
+import React, { useState } from 'react';
+import EditorJs from 'react-editor-js';
+import { EDITOR_JS_TOOLS } from './editor-config';
 import './index.css';
+
+export default function EditorPage() {
+
+  const data = {
+    time: 1556098174501,
+    blocks: [{ type: "header", data: { text: "Editor.js", level: 2 } }]
+  };
+
+  return (
+    <div className="editor-wrapper">
+      <div className="editor">
+        <EditorJs tools={EDITOR_JS_TOOLS} data={data} />
+      </div>
+    </div>
+  );
+}
 
 /*
   * Editor Page
@@ -13,20 +27,3 @@ import './index.css';
   [ ] Editor area = half of the screen
   [ ] preview area = other half
 */
-
-export default function EditorPage() {
-
-  return (
-    <div className="editor-wrapper">
-      <div className="editor">
-        <MyEditor />
-      </div>
-    </div>
-  );
-}
-
-function MyEditor() {
-  const [editorState, setEditorState] = React.useState(() => EditorState.createEmpty());
-
-  return <Editor editorState={editorState} onChange={setEditorState} />
-}

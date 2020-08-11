@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header({ functions }) {
   const [bgColor, setBgColor] = useState('#00000000');
@@ -36,7 +37,7 @@ export default function Header({ functions }) {
           <button style={{ color: txtColor }} onClick={() => { functions.goToHome() }} >Home</button>
           <button style={{ color: txtColor }} onClick={() => { functions.goToAbout() }} >Sobre</button>
           <button style={{ color: txtColor }} onClick={() => { functions.goToSkills() }} >Skills</button>
-          <button style={{ color: txtColor }} onClick={() => { functions.goToBlog() }} >Blog</button>
+          <Link style={{ color: txtColor }} to='/blog'>Blog</Link>
         </div>
       </div>
     </header>

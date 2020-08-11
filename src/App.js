@@ -5,6 +5,7 @@ import './App.css';
 
 import HomePage from './pages/Home';
 import EditorPage from './pages/Editor';
+import BlogPage from './pages/Blog';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Switch>
         <Route path='/' exact component={HomePage} />
         <Route path='/editor' exact component={EditorPage} />
+        <Route path='/blog' exact component={BlogPage} />
       </Switch>
     </BrowserRouter>
   );
