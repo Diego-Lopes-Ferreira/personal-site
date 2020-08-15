@@ -1,0 +1,39 @@
+.text-block-editor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #0f0f0f;
+}
+
+.text-block-editor .editable-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
+
+.text-block-editor .editable-wrapper .left {
+  background-color: #00ff00;
+}
+.text-block-editor .editable-wrapper .left button {
+  margin: 0.2rem 1rem;
+  padding: 0.2rem 1rem;
+}
+.text-block-editor .editable-wrapper .content {
+  background-color: #ff0000;
+  flex: 1;
+}
+.text-block-editor .editable-wrapper .content input {
+  display: flex;
+  width: 100%;
+  text-align: justify;
+}
+.text-block-editor .editable-wrapper .right {
+  background-color: #00ff00;
+}
+.text-block-editor .editable-wrapper .right button {
+  margin: 0.2rem 1rem;
+  padding: 0.2rem 1rem;
+}
