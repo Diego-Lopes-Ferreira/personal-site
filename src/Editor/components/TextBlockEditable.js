@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import useFocus from '../utils/useFocus';
-import FlexTextArea from '../components/FlexTextArea';
 
-export default function TextBlockEditable({ initialData, type }) {
+import FlexTextArea from '../components/FlexTextArea';
+import RendererTextArea from '../components/RendererTextArea';
+
+export default function TextBlockEditable({ initialData, type='p' }) {
   const [editMode, setEditMode] = useState(true);
   const [content, setContent] = useState(initialData);
   const [inputRef, setInputFocus] = useFocus(); //Personalized state
@@ -29,12 +31,12 @@ export default function TextBlockEditable({ initialData, type }) {
 
   if (editMode) {
     return (
-      <div onBlur={() => {setEditMode(false)}} className="editable-wrapper">
+      <div onBlur={() => { setEditMode(false) }} className="editable-wrapper">
         <LeftSide />
         <div className="content">
           <FlexTextArea value={content} refere={inputRef} handleChange={text => setContent(text)} />
         </div>
-      <RightSide />
+        <RightSide />
       </div>
     );
   } else {
@@ -42,7 +44,7 @@ export default function TextBlockEditable({ initialData, type }) {
       <div onClick={() => setEditMode(true)} className="editable-wrapper">
         <LeftSide />
         <div className="content">
-          <ReactMarkdown source={content} />
+          <RendererTextArea data={content} type={type} />
         </div>
         <RightSide />
       </div>
