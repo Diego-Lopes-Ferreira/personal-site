@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import './editor.css';
 
@@ -11,9 +11,23 @@ export default function TextBlockEditor({ initialData, configuration, onSave }) 
   );
 }
 
+function useFocus() {
+  const htmlElRef = useRef(null)
+  function setFocus() {
+    htmlElRef.current &&  htmlElRef.current.focus()
+  }
+  return [ htmlElRef, setFocus ];
+}
+
 function TextBlockEditable({ initialData, type }) {
   const [editMode, setEditMode] = useState(true);
   const [content, setContent] = useState(initialData);
+
+  const [inputRef, setInputFocus] = useFocus();
+
+  useEffect(() => {
+    setInputFocus();
+  }, [editMode])
 
   if (editMode) {
     return (
@@ -23,7 +37,7 @@ function TextBlockEditable({ initialData, type }) {
           <button>move</button>
         </div>
         <div className="content">
-          <input value={content} onChange={(el) => setContent(el.target.value)}></input>
+          <input value={content} ref={inputRef} onChange={(el) => setContent(el.target.value)}></input>
         </div>
         <div className="right">
           <button> + </button>
