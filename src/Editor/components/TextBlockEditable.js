@@ -1,27 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-function useFocus() {
-  // Hook to focus a specifc element
-  // Returns a useRef() and a function that focuses the element with that ref
-  const htmlElRef = useRef(null)
-  function setFocus() {
-    htmlElRef.current && htmlElRef.current.focus()
-  }
-  return [htmlElRef, setFocus];
-}
+import useFocus from '../utils/useFocus';
+import FlexTextArea from '../components/FlexTextArea';
 
 export default function TextBlockEditable({ initialData, type }) {
   const [editMode, setEditMode] = useState(true);
   const [content, setContent] = useState(initialData);
-
   const [inputRef, setInputFocus] = useFocus(); //Personalized state
-
   useEffect(() => {
     setInputFocus();
   }, [editMode])
-
-
   function LeftSide() {
     return (
       <div className="left">
@@ -40,10 +29,10 @@ export default function TextBlockEditable({ initialData, type }) {
 
   if (editMode) {
     return (
-      <div onBlur={() => setEditMode(false)} className="editable-wrapper">
+      <div onBlur={() => {setEditMode(false)}} className="editable-wrapper">
         <LeftSide />
         <div className="content">
-          <input value={content} ref={inputRef} onChange={(el) => setContent(el.target.value)}></input>
+          <FlexTextArea value={content} refere={inputRef} handleChange={text => setContent(text)} />
         </div>
       <RightSide />
       </div>

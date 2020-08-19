@@ -22,3 +22,8 @@ code {
 button {
   cursor: pointer;
 }
+
+textarea {
+  transition: none;
+  resize: none;
+}
