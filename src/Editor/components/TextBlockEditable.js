@@ -16,13 +16,16 @@ export default function TextBlockEditable({ initialData, type='p' }) {
   }, [editMode])
 
   function LeftSide() {
+    const list = ['h1', 'p']
+    const options = list.map((item) => (<option value={item}>{item}</option>))
     return (
       <div className="left">
         <button> + </button>
         <button>move</button>
         <select>
-          <option>h1</option>
-          <option>p</option>
+          <optgroup>
+            {options}
+          </optgroup>
         </select>
       </div>
     );
@@ -38,9 +41,9 @@ export default function TextBlockEditable({ initialData, type='p' }) {
 
   if (editMode) {
     return (
-      <div onBlur={() => { setEditMode(false) }} className="editable-wrapper">
+      <div  className="editable-wrapper">
         <LeftSide />
-        <div className="content">
+        <div onBlur={() => { setEditMode(false) }} className="content">
           <FlexTextArea value={content} refere={inputRef} handleChange={text => setContent(text)} />
         </div>
         <RightSide />
@@ -48,9 +51,9 @@ export default function TextBlockEditable({ initialData, type='p' }) {
     );
   } else {
     return (
-      <div onClick={() => setEditMode(true)} className="editable-wrapper">
+      <div className="editable-wrapper">
         <LeftSide />
-        <div className="content">
+        <div onClick={() => setEditMode(true)} className="content">
           <RendererTextArea data={content} type={type} />
         </div>
         <RightSide />
