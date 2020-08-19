@@ -7,6 +7,10 @@ export default function RendererTextArea({ data, type }) {
   const [content, setContent] = useState(data);
   const [inputRef, setInputFocus] = useFocus(); //Personalized state
 
+  if (content == '' || content == null) {
+    setContent('Type here');
+  }
+
   var mainElement = (<p dangerouslySetInnerHTML={{ __html: content }}></p>)
 
   switch (type) {
