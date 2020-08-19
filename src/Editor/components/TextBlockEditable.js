@@ -10,17 +10,24 @@ export default function TextBlockEditable({ initialData, type='p' }) {
   const [editMode, setEditMode] = useState(true);
   const [content, setContent] = useState(initialData);
   const [inputRef, setInputFocus] = useFocus(); //Personalized state
+  
   useEffect(() => {
     setInputFocus();
   }, [editMode])
+
   function LeftSide() {
     return (
       <div className="left">
         <button> + </button>
         <button>move</button>
+        <select>
+          <option>h1</option>
+          <option>p</option>
+        </select>
       </div>
     );
   }
+  
   function RightSide() {
     return (
       <div className="right">
