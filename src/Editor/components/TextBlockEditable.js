@@ -39,6 +39,18 @@ export default function TextBlockEditable({ initialData, type='p' }) {
     );
   }
 
+  return (
+    <div className="editable-wrapper">
+      <LeftSide />
+      <div onClick={() => setEditMode(!editMode)} className="content">
+        <RendererTextArea data={content} />
+      </div>
+      <div className="hidden">
+        <FlexTextArea value={content} refere={inputRef} handleChange={text => setContent(text)} />
+      </div>
+      <RightSide />
+    </div>
+  );
   if (editMode) {
     return (
       <div  className="editable-wrapper">

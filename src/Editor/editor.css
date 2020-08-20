@@ -25,6 +25,14 @@
   background-color: #ff0000;
   flex: 1;
 }
+.text-block-editor .editable-wrapper .hidden {
+  background-color: transparent;
+  color: transparent;
+}
+.text-block-editor .editable-wrapper .hidden textarea {
+  background-color: transparent;
+  color: transparent;
+}
 .text-block-editor .editable-wrapper .content textarea {
   display: flex;
   width: 100%;

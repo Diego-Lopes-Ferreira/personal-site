@@ -7,9 +7,14 @@ export default function RendererTextArea({ data, type }) {
   const [content, setContent] = useState(data);
   const [inputRef, setInputFocus] = useFocus(); //Personalized state
 
-  if (content == '' || content == null) {
+  if (!content) {
     setContent('Type here');
   }
+
+  useEffect(() => {
+    setContent(data)
+  }, [data])
+
 
   var mainElement = (<p dangerouslySetInnerHTML={{ __html: content }}></p>)
 
@@ -24,7 +29,7 @@ export default function RendererTextArea({ data, type }) {
 
   return (
     <div className="editor-render">
-      {mainElement}
+      <ReactMarkdown source={content} />
     </div>
   );
 }
