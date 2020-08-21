@@ -9,12 +9,32 @@
 
 .editor-page .editor-wrapper {
   border-radius: 1rem;
-  /* background-color: #ff0000; */
-  border: 0.1rem solid #0f0f0f ;
+  /*
+  background-color: #ff0000;
+  border: 0.1rem solid #0f0f0f;
+  */
+  width: fit-content;
+  margin: auto;
 }
 
+.quill {
+  max-width: 900px;
+}
 .ql-toolbar {
   border-radius: 1rem 1rem 0 0;
+  /*
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  */
+}
+.ql-toolbar .ql-formats {
+  /*
+  border: 1px solid #0f0f0f;
+  border-radius: 10px;
+  */
+  margin: 0;
 }
 .ql-container {
   border-radius: 0 0 1rem 1rem;
