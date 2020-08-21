@@ -1,47 +1,21 @@
-.text-block-editor {
+.editor-page {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  color: #0f0f0f;
+  padding: 2rem;
 }
 
-.text-block-editor .editable-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-  width: 100%;
+.editor-page .editor-wrapper {
+  border-radius: 1rem;
+  /* background-color: #ff0000; */
+  border: 0.1rem solid #0f0f0f ;
 }
 
-.text-block-editor .editable-wrapper .left {
-  background-color: #00ff00;
+.ql-toolbar {
+  border-radius: 1rem 1rem 0 0;
 }
-.text-block-editor .editable-wrapper .left button {
-  margin: 0.2rem 1rem;
-  padding: 0.2rem 1rem;
-}
-.text-block-editor .editable-wrapper .content {
-  background-color: #ff0000;
-  flex: 1;
-}
-.text-block-editor .editable-wrapper .hidden {
-  background-color: transparent;
-  color: transparent;
-}
-.text-block-editor .editable-wrapper .hidden textarea {
-  background-color: transparent;
-  color: transparent;
-}
-.text-block-editor .editable-wrapper .content textarea {
-  display: flex;
-  width: 100%;
-  text-align: justify;
-}
-.text-block-editor .editable-wrapper .right {
-  background-color: #00ff00;
-}
-.text-block-editor .editable-wrapper .right button {
-  margin: 0.2rem 1rem;
-  padding: 0.2rem 1rem;
+.ql-container {
+  border-radius: 0 0 1rem 1rem;
 }
